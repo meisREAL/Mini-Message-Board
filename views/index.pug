@@ -3,6 +3,10 @@ extends layout
 block content
   h1= title
   h3 Welcome to #{title}
+  
+  div
+    a.submit(href='/new') Submit Message
+
   each message in messages
     .messageCard 
       p.text= message.text

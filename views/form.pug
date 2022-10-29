@@ -1,0 +1,19 @@
+extends layout
+
+block content
+ h1= title
+ p Welcome to #{title}
+
+ h2 Message Form
+ .form-container
+  form(action="/new" method="POST")
+   label(for="messageText")
+    textarea(name="messageText", cols="30", rows="5", placeholder="Your Message", type="text")
+   label(for="user", required)
+    input(type="text", name="user", placeholder="Author", required)
+   input(type="submit", value="Submit Message")
+
+
+
+
+ 
